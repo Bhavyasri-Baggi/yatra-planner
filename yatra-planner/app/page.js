@@ -1,24 +1,47 @@
-// app/page.js
-import React from "react";
-
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-r from-blue-200 to-indigo-400 flex flex-col items-center justify-center p-6">
-      <h1 className="text-5xl font-bold text-white mb-6 text-center">
-        Welcome to Yatra Planner
-      </h1>
-      <p className="text-lg text-white text-center max-w-xl mb-8">
-        Plan your dream trips effortlessly! Explore destinations, create itineraries, and make your journeys unforgettable.
-      </p>
+    <div style={{ textAlign: "center", padding: "20px", fontFamily: "Arial" }}>
+      <h1>Home Screen</h1>
 
-      <div className="flex flex-col sm:flex-row gap-4">
-        <button className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-indigo-50 transition">
-          Plan a Trip
-        </button>
-        <button className="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition">
-          Explore Destinations
+      <div style={{ margin: "20px" }}>
+        <label>Search Temple: </label>
+        <input type="text" placeholder="Enter temple name..." style={{ padding: "8px", borderRadius: "6px" }} />
+        <button style={{ marginLeft: "10px", padding: "8px 12px", borderRadius: "6px", background: "#007bff", color: "#fff", border: "none" }}>
+          Search
         </button>
       </div>
-    </main>
+
+      <div style={{ background: "#fff", margin: "20px auto", padding: "20px", maxWidth: "600px", borderRadius: "12px", boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }}>
+        <h2>Meenakshi Temple</h2>
+        <p><b>Location:</b> Madurai, Tamil Nadu</p>
+        <p><b>History:</b> Historic temple dedicated to goddess Meenakshi.</p>
+        <p><b>Route:</b> Start → Highway → Madurai → Temple</p>
+        <p><i>Image not found</i></p>
+      </div>
+
+      <button className="btn">Plan My Yatra</button>
+      <button className="btn">Nearby Temples</button>
+      <button className="btn">My Bookings</button>
+      <button className="btn">Suggested Trips Carousel</button>
+
+      <style jsx>{`
+        .btn {
+          display: block;
+          margin: 15px auto;
+          padding: 12px 20px;
+          width: 250px;
+          border: none;
+          border-radius: 8px;
+          background: #007bff;
+          color: #fff;
+          font-size: 1rem;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        .btn:hover {
+          background: #0056b3;
+        }
+      `}</style>
+    </div>
   );
 }
